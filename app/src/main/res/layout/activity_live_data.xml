@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".livedatapackage.LiveDataActivity">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.shivani.colorpractice.livedatapackage.LiveDataActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Red"
+                android:text="Red"
+                android:onClick="@{()->activity.buttonClick(0)}"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Blue"
+                android:text="Blue"
+                android:onClick="@{()->activity.buttonClick(1)}"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Pink"
+                android:text="Pink"
+                android:onClick="@{()->activity.buttonClick(2)}"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment1"
+            android:name="com.shivani.colorpractice.livedatapackage.LiveDataFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>
